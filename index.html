@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberBooking | Gerenciamento de Planos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>💈 BarberBooking Pro</h1>
+            <p>Gestão de Clientes e Planos de Barbearia</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="agendamento-card">
+            <h2>Registro de Agendamento e Plano</h2>
+
+            <!-- Aqui, o formulário expandiu para incluir o controle de plano -->
+            <form id="formAgendamento">
+
+                <!-- Dados do Cliente e Agendamento -->
+                <div class="input-group" id="group-cliente">
+                    <label for="nomeCliente">Nome do Cliente:</label>
+                    <input type="text" id="nomeCliente" required placeholder="Nome completo do cliente">
+                </div>
+
+                <div class="input-group" id="group-agendamento">
+                    <label for="data">Data do Agendamento:</label>
+                    <input type="date" id="data" required>
+                </div>
+
+                <div class="input-group" id="group-hora">
+                    <label for="hora">Horário:</label>
+                    <input type="time" id="hora" required>
+                </div>
+
+                <div class="input-group" id="group-servico">
+                    <label for="servico">Serviço Solicitado:</label>
+                    <select id="servico" required>
+                        <option value="" selected disabled>Selecione um serviço...</option>
+                        <option value="corte">Corte Clássico</option>
+                        <option value="barba">Barba Premium</option>
+                        <option value="completo">Pacote Completo</option>
+                    </select>
+                </div>
+
+                <!-- NOVAS SEÇÕES: CONTROLE DE PLANO -->
+                <hr style="margin: 25px 0; border-color: var(--metalico-claro);">
+
+                <h3 style="text-align: center; color: var(--azul-metalico); margin-bottom: 15px;">Controle de Plano Mensal</h3>
+
+                <div class="input-group" id="group-plano-total">
+                    <label for="totalCortes">Total de Cortes no Plano:</label>
+                    <input type="number" id="totalCortes" value="10" min="1" required>
+                </div>
+
+                <div class="input-group" id="group-plano-usado">
+                    <label for="cortesUsados">Cortes Já Utilizados:</label>
+                    <input type="number" id="cortesUsados" value="0" min="0" required>
+                </div>
+
+                <div class="input-group" id="group-plano-dias">
+                    <label for="diasRestantes">Dias Restantes no Plano:</label>
+                    <input type="number" id="diasRestantes" value="30" min="1" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Registrar Agendamento e Atualizar Plano</button>
+            </form>
+            <div id="mensagemSucesso" class="mensagem" style="display:none;"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 BarberBooking. Gestão de Estilo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

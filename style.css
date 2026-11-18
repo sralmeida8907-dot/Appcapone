@@ -1,0 +1,143 @@
+/* Variáveis de Cor para facilitar a alteração */
+:root {
+    --azul-metalico: #0077b6; /* Um azul vibrante */
+    --cinza-escuro: #333;
+    --cinza-claro: #f4f7f9;
+    --metalico-claro: #b2bec3;
+    --brilho: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- HEADER --- */
+.header {
+    background-color: var(--azul-metalico);
+    color: var(--brilho);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* --- MAIN CONTENT (Card de Agendamento) --- */
+main {
+    padding: 40px 0;
+}
+
+.agendamento-card {
+    background: var(--brilho);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 700px; /* Aumentei um pouco a largura para os novos campos */
+    margin: 20px auto;
+    border-top: 8px solid var(--azul-metalico);
+}
+
+.agendamento-card h2 {
+    text-align: center;
+    color: var(--azul-metalico);
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* --- FORMULÁRIO --- */
+.input-group {
+    margin-bottom: 18px; /* Ajustado o espaçamento */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px; /* Um pouco menos de espaço entre label e input */
+    font-weight: 700;
+    color: var(--cinza-escuro);
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group input[type="time"],
+.input-group select,
+.input-group input[type="number"] { /* Adicionado input[type="number"] */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--metalico-claro);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    background-color: var(--cinza-claro);
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    border-color: var(--azul-metalico); 
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+/* --- BOTÃO --- */
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul-metalico);
+    color: var(--brilho);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #005f8e;
+    transform: translateY(-2px);
+}
+
+/* Mensagem de Sucesso */
+.mensagem {
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: #e0f7fa;
+    color: var(--azul-metalico);
+    border: 1px solid var(--azul-metalico);
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--cinza-escuro);
+    color: var(--metalico-claro);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
